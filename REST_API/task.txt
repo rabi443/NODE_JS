@@ -1,0 +1,11 @@
+# First from -> mockaroo website generate data for crud operation in JSON format 
+  then save it .Because currently we are not using any database so we use hard coded data for operation
+
+# Basics of REST API - JSON
+
+a. GET/Users - List all users
+b. GET/Users/1 - Get the user with id=1
+c. Get/Users/2 - Get the user with id=2
+d. POST/Users - Create new user
+e. PATCH/Users/1 - Edit the user with id=1
+f. DELETE/Users/1 - Delete the user with id=1 

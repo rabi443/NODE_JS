@@ -1,0 +1,2 @@
+Rabin Kumar chaudhary! welcome to Node.js Synchronous file handling.
+This is an appended line.
