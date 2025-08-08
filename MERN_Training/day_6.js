@@ -17,9 +17,9 @@
 // }
 
 
-// //array methods
-let students = ["John", "Jane", "Jim", "Jill", "Saurav", "Sunil", "Amish"]; 
-console.log("Orginal Array :", students,"\n\n"); 
+// // //array methods
+// let students = ["John", "Jane", "Jim", "Jill", "Saurav", "Sunil", "Amish"]; 
+// console.log("Orginal Array :", students,"\n\n"); 
 
 // //pop to remove the last element
 // let removedStudent = students.pop(); 
@@ -47,9 +47,9 @@ console.log("Orginal Array :", students,"\n\n");
 // console.log("Original Array after slice:", students,"\n\n");
 
 // //splice to remove elements from a specific index  here (x, y) x is the starting index and y is the number of elements to remove
-let removedStudentsFromSpecificIndexRange = students.splice(0, 3); // This will remove 2 elements starting from index 1
-console.log("Removed students from index 1 to 2:", removedStudentsFromSpecificIndexRange);
-console.log("After splice:", students,"\n\n");
+// let removedStudentsFromSpecificIndexRange = students.splice(0, 3); // This will remove 2 elements starting from index 1
+// console.log("Removed students from index 1 to 2:", removedStudentsFromSpecificIndexRange);
+// console.log("After splice:", students,"\n\n");
 
 // //splice is also used to update elements from a specific starting index 
 // students.splice(1, 1, "Bob", "Charlie"); 
@@ -61,6 +61,7 @@ console.log("After splice:", students,"\n\n");
 // let newArray = [1,2,3]; // This is an array of numbers
 // console.log("User array:", newArray,"\n\n"); // This will print the user array
 // let mergedArray = newStudents.concat(newArray); // This will concatenate the arrays
+// // let mergedArray = newStudents + newArray;
 // console.log("Merged array:", mergedArray, "\n\n"); // This will print the concatenated array
 
 
@@ -74,10 +75,10 @@ console.log("After splice:", students,"\n\n");
 // let reverseUser = user.reverse(); // This will reverse the order of the elements in the array
 // console.log("Reversed user:", reverseUser); // This will print the reversed array
 
-// //split()
+// //split() it is used in string only to convert the string in array
 // let name= "Rabin Chaudhary";
 // console.log("Name:", name);
-// let splitName = name.split(" "); 
+// let splitName = name.split('');  //('') is used to split string when it reach space between string and space id automatically removed 
 // console.log("Split name:", splitName);
 
 // //sort()
@@ -96,4 +97,4 @@ console.log("After splice:", students,"\n\n");
 // console.log(date.getDate()); // This will print the day of the month of the date 
 
 // console.log(new Date().toISOString()); // This will print the current date in ISO format    
-// console.log(new Date()); //This will print the current date and time 
+// console.log(new Date()); //This will print the same as above 

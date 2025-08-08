@@ -106,8 +106,8 @@
 
 
 
-const number = [ 1,2,3,4,4,5,5,6,6,7];
-const result = [...new Set(number)]; // Using Set to remove duplicates
-console.log(result); // Output: [1, 2, 3, 4, 5, 6, 7]
+// const number = [ 1,2,3,4,4,5,5,6,6,7];
+// const result = [...new Set(number)]; // Using Set to remove duplicates
+// console.log(result); // Output: [1, 2, 3, 4, 5, 6, 7]
 
 // indexOf, filter  use it to remove duplicates

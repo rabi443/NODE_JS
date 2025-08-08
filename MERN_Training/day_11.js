@@ -3,7 +3,7 @@
 // answer[321,654,987,101]
 const num = [123,456,789,101];
 const result =num.map(item => {
-  return item.toString().split('').reverse().join('');
+  return Number(item.toString().split('').reverse().join(''));
 })
 console.log (result);
 
