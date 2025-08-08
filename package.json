@@ -4,7 +4,7 @@
   "main": "helloWorld.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon REST_API/rest_api.js"
+    "start": "nodemon helloWorld.js"
   },
   "author": "",
   "license": "ISC",

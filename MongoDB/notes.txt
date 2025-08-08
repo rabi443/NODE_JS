@@ -1,0 +1,144 @@
+
+* 🔸 From the **command-line shell (`mongosh`)**
+* 🔸 Or by connecting it to your **own applications** (Node.js, PHP, etc.)
+* 🔸 Or using **MongoDB Compass** (GUI)
+
+---
+
+## ✅ A. Use MongoDB from Shell (`mongosh`)
+
+### 👉 Start Shell:
+
+```bash
+mongosh
+```
+
+### Now try these basic commands inside shell:
+
+```js
+// 1. Create or switch to a database
+use myDB
+
+// 2. Create a collection and insert a document
+db.users.insertOne({ name: "Rabin", age: 25, address: "Biratnagar" })
+
+// 3. View inserted data
+db.users.find()
+
+// 4. Update a document
+db.users.updateOne({ name: "Rabin" }, { $set: { age: 26 } })
+
+// 5. Delete a document
+db.users.deleteOne({ name: "Rabin" })
+
+// 6. Show all collections
+show collections
+
+// 7. Show all databases
+show dbs
+```
+
+---
+
+## ✅ B. Use MongoDB with Node.js
+
+Want to build a Node.js app? Here's a mini example:
+
+### 👉 1. Create project folder:
+
+```bash
+mkdir mongo-test
+cd mongo-test
+npm init -y
+npm install mongodb
+```
+
+### 👉 2. Create `index.js`:
+
+```js
+const { MongoClient } = require('mongodb');
+
+const uri = 'mongodb://localhost:27017';
+const client = new MongoClient(uri);
+
+async function run() {
+  try {
+    await client.connect();
+    const db = client.db('myDB');
+    const users = db.collection('users');
+
+    // Insert
+    await users.insertOne({ name: 'Rabin', age: 25 });
+
+    // Read
+    const result = await users.find().toArray();
+    console.log(result);
+  } finally {
+    await client.close();
+  }
+}
+
+run();
+```
+
+### 👉 3. Run it:
+
+```bash
+node index.js
+```
+
+---
+
+## ✅ C. Use MongoDB with PHP
+
+If you're using XAMPP or WAMP, install MongoDB extension for PHP:
+
+### 👉 1. Install MongoDB PHP extension
+
+In `php.ini`, enable:
+
+```
+extension=php_mongodb.dll
+```
+
+Then restart Apache.
+
+### 👉 2. Sample PHP code:
+
+```php
+<?php
+require 'vendor/autoload.php'; // after installing mongodb/mongodb via Composer
+
+$client = new MongoDB\Client("mongodb://localhost:27017");
+$collection = $client->myDB->users;
+
+// Insert
+$collection->insertOne(['name' => 'Rabin', 'age' => 25]);
+
+// Read
+$result = $collection->find();
+
+foreach ($result as $doc) {
+    print_r($doc);
+}
+?>
+```
+
+---
+
+## ✅ D. Use MongoDB Compass (GUI)
+
+1. Open MongoDB Compass
+2. Connect to:
+
+```
+mongodb://localhost:27017
+```
+
+3. Browse databases visually:
+
+   * Create DBs
+   * Insert/edit docs
+   * Run queries easily
+
+---
